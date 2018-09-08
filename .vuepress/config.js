@@ -1,5 +1,5 @@
 module.exports = {
-  dest: 'poccomponents',
+  dest: 'dist',
   title: 'POC Componentes',
   description: 'Guia de referência para uso e desenvolvimento de componentes Front-End',
   head: [
