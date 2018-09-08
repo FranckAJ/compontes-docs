@@ -1,32 +1,39 @@
 module.exports = {
+  dest: 'poccomponents',
   title: 'POC Componentes',
-  description: 'Especificação componentes',
+  description: 'Guia de referência para uso e desenvolvimento de componentes Front-End',
   head: [
     ['link', { rel: 'icon', href: `/logo.png` }],
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'theme-color', content: '#609' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
+  serviceWorker: true,
   themeConfig: {
     editLinks: true,
     nav: [
       {
-        text: 'Components',
+        text: 'Guia',
+        link: '/intro/',
+      },
+      {
+        text: 'Componentes',
         link: '/components/',
       },
       {
-        text: 'About',
+        text: 'Sobre',
         link: '/about/'
       }
     ],
     sidebar: {
-      '/components/': genSidebarConfig('Guia')
+      '/intro/': sidebarIntro('Guia de uso'),
+      '/components/': sidebarComponents('Componentes')
     }
 
   }
 }
 
-function genSidebarConfig(title) {
+function sidebarComponents(title) {
   return [
     {
       title,
@@ -34,6 +41,19 @@ function genSidebarConfig(title) {
       children: [
         '',
         'buttom'
+      ]
+    }
+  ]
+}
+
+function sidebarIntro(title) {
+  return [
+    {
+      title,
+      collapsable: false,
+      children: [
+        '',
+        'how'
       ]
     }
   ]
