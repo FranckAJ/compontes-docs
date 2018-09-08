@@ -1,5 +1,6 @@
 module.exports = {
   dest: 'dist',
+  base: '/compontes-docs/',
   title: 'POC Componentes',
   description: 'Guia de referência para uso e desenvolvimento de componentes Front-End',
   head: [
